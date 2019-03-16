@@ -4,7 +4,7 @@
 #
 Name     : R-adephylo
 Version  : 1.1.11
-Release  : 7
+Release  : 8
 URL      : https://cran.r-project.org/src/contrib/adephylo_1.1-11.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/adephylo_1.1-11.tar.gz
 Summary  : Exploratory Analyses for the Phylogenetic Comparative Method
