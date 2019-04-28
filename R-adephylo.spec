@@ -4,22 +4,15 @@
 #
 Name     : R-adephylo
 Version  : 1.1.11
-Release  : 13
+Release  : 14
 URL      : https://cran.r-project.org/src/contrib/adephylo_1.1-11.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/adephylo_1.1-11.tar.gz
 Summary  : Exploratory Analyses for the Phylogenetic Comparative Method
 Group    : Development/Tools
 License  : GPL-2.0+
 Requires: R-adephylo-lib = %{version}-%{release}
-Requires: R-RNeXML
-Requires: R-XML
-Requires: R-igraph
-Requires: R-rncl
-Requires: R-seqinr
-Requires: R-tidyr
-Requires: R-uuid
-Requires: R-vegan
-Requires: R-xml2
+Requires: R-progress
+Requires: R-tidyselect
 BuildRequires : R-RNeXML
 BuildRequires : R-XML
 BuildRequires : R-ade4
@@ -28,11 +21,13 @@ BuildRequires : R-ape
 BuildRequires : R-ggplot2
 BuildRequires : R-igraph
 BuildRequires : R-phylobase
+BuildRequires : R-progress
 BuildRequires : R-rncl
 BuildRequires : R-seqinr
 BuildRequires : R-shiny
 BuildRequires : R-spdep
 BuildRequires : R-tidyr
+BuildRequires : R-tidyselect
 BuildRequires : R-uuid
 BuildRequires : R-vegan
 BuildRequires : R-xml2
@@ -57,10 +52,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1556462576
+export SOURCE_DATE_EPOCH=1556481896
 
 %install
-export SOURCE_DATE_EPOCH=1556462576
+export SOURCE_DATE_EPOCH=1556481896
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "

@@ -7,11 +7,13 @@ R-ape
 R-ggplot2
 R-igraph
 R-phylobase
+R-progress
 R-rncl
 R-seqinr
 R-shiny
 R-spdep
 R-tidyr
+R-tidyselect
 R-uuid
 R-vegan
 R-xml2
