@@ -5,6 +5,7 @@ R-ade4
 R-adegenet
 R-ape
 R-ggplot2
+R-glue
 R-igraph
 R-phylobase
 R-progress

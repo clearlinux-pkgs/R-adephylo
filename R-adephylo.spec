@@ -4,21 +4,21 @@
 #
 Name     : R-adephylo
 Version  : 1.1.11
-Release  : 14
+Release  : 15
 URL      : https://cran.r-project.org/src/contrib/adephylo_1.1-11.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/adephylo_1.1-11.tar.gz
 Summary  : Exploratory Analyses for the Phylogenetic Comparative Method
 Group    : Development/Tools
 License  : GPL-2.0+
 Requires: R-adephylo-lib = %{version}-%{release}
-Requires: R-progress
-Requires: R-tidyselect
+Requires: R-glue
 BuildRequires : R-RNeXML
 BuildRequires : R-XML
 BuildRequires : R-ade4
 BuildRequires : R-adegenet
 BuildRequires : R-ape
 BuildRequires : R-ggplot2
+BuildRequires : R-glue
 BuildRequires : R-igraph
 BuildRequires : R-phylobase
 BuildRequires : R-progress
@@ -52,10 +52,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1556481896
+export SOURCE_DATE_EPOCH=1556487280
 
 %install
-export SOURCE_DATE_EPOCH=1556481896
+export SOURCE_DATE_EPOCH=1556487280
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
