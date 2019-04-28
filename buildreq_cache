@@ -1,8 +1,17 @@
 1.1.11
+R-RNeXML
+R-XML
 R-ade4
 R-adegenet
 R-ape
 R-ggplot2
+R-igraph
 R-phylobase
+R-rncl
+R-seqinr
 R-shiny
 R-spdep
+R-tidyr
+R-uuid
+R-vegan
+R-xml2

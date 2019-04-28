@@ -4,27 +4,38 @@
 #
 Name     : R-adephylo
 Version  : 1.1.11
-Release  : 11
+Release  : 12
 URL      : https://cran.r-project.org/src/contrib/adephylo_1.1-11.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/adephylo_1.1-11.tar.gz
 Summary  : Exploratory Analyses for the Phylogenetic Comparative Method
 Group    : Development/Tools
 License  : GPL-2.0+
 Requires: R-adephylo-lib = %{version}-%{release}
-Requires: R-ade4
-Requires: R-adegenet
-Requires: R-ape
-Requires: R-ggplot2
-Requires: R-phylobase
-Requires: R-shiny
-Requires: R-spdep
+Requires: R-RNeXML
+Requires: R-XML
+Requires: R-igraph
+Requires: R-rncl
+Requires: R-seqinr
+Requires: R-tidyr
+Requires: R-uuid
+Requires: R-vegan
+Requires: R-xml2
+BuildRequires : R-RNeXML
+BuildRequires : R-XML
 BuildRequires : R-ade4
 BuildRequires : R-adegenet
 BuildRequires : R-ape
 BuildRequires : R-ggplot2
+BuildRequires : R-igraph
 BuildRequires : R-phylobase
+BuildRequires : R-rncl
+BuildRequires : R-seqinr
 BuildRequires : R-shiny
 BuildRequires : R-spdep
+BuildRequires : R-tidyr
+BuildRequires : R-uuid
+BuildRequires : R-vegan
+BuildRequires : R-xml2
 BuildRequires : buildreq-R
 
 %description
@@ -46,10 +57,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552709468
+export SOURCE_DATE_EPOCH=1556462576
 
 %install
-export SOURCE_DATE_EPOCH=1552709468
+export SOURCE_DATE_EPOCH=1556462576
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -85,7 +96,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc  adephylo || :
+R CMD check --no-manual --no-examples --no-codoc adephylo || :
 
 
 %files
