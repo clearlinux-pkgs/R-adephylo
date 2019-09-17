@@ -4,33 +4,21 @@
 #
 Name     : R-adephylo
 Version  : 1.1.11
-Release  : 17
+Release  : 18
 URL      : https://cran.r-project.org/src/contrib/adephylo_1.1-11.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/adephylo_1.1-11.tar.gz
 Summary  : Exploratory Analyses for the Phylogenetic Comparative Method
 Group    : Development/Tools
 License  : GPL-2.0+
 Requires: R-adephylo-lib = %{version}-%{release}
-Requires: R-glue
-BuildRequires : R-RNeXML
-BuildRequires : R-XML
+Requires: R-ade4
+Requires: R-adegenet
+Requires: R-ape
+Requires: R-phylobase
 BuildRequires : R-ade4
 BuildRequires : R-adegenet
 BuildRequires : R-ape
-BuildRequires : R-ggplot2
-BuildRequires : R-glue
-BuildRequires : R-igraph
 BuildRequires : R-phylobase
-BuildRequires : R-progress
-BuildRequires : R-rncl
-BuildRequires : R-seqinr
-BuildRequires : R-shiny
-BuildRequires : R-spdep
-BuildRequires : R-tidyr
-BuildRequires : R-tidyselect
-BuildRequires : R-uuid
-BuildRequires : R-vegan
-BuildRequires : R-xml2
 BuildRequires : buildreq-R
 
 %description
@@ -51,13 +39,13 @@ lib components for the R-adephylo package.
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1556487280
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1568750444
 
 %install
-export SOURCE_DATE_EPOCH=1556487280
+export SOURCE_DATE_EPOCH=1568750444
 rm -rf %{buildroot}
-export LANG=C
+export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -86,7 +74,7 @@ R CMD INSTALL --preclean --install-tests --built-timestamp=${SOURCE_DATE_EPOCH} 
 cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 %{__rm} -rf %{buildroot}%{_datadir}/R/library/R.css
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
