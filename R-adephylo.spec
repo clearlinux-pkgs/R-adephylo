@@ -4,7 +4,7 @@
 #
 Name     : R-adephylo
 Version  : 1.1.11
-Release  : 22
+Release  : 23
 URL      : https://cran.r-project.org/src/contrib/adephylo_1.1-11.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/adephylo_1.1-11.tar.gz
 Summary  : Exploratory Analyses for the Phylogenetic Comparative Method
@@ -20,7 +20,6 @@ BuildRequires : R-adegenet
 BuildRequires : R-ape
 BuildRequires : R-phylobase
 BuildRequires : buildreq-R
-BuildRequires : util-linux
 
 %description
 and some traits measured for each taxa.
@@ -35,21 +34,22 @@ lib components for the R-adephylo package.
 
 %prep
 %setup -q -c -n adephylo
+cd %{_builddir}/adephylo
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571794585
+export SOURCE_DATE_EPOCH=1589787937
 
 %install
-export SOURCE_DATE_EPOCH=1571794585
+export SOURCE_DATE_EPOCH=1589787937
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
