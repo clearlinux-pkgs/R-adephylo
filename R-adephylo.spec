@@ -5,7 +5,7 @@
 #
 Name     : R-adephylo
 Version  : 1.1.16
-Release  : 51
+Release  : 52
 URL      : https://cran.r-project.org/src/contrib/adephylo_1.1-16.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/adephylo_1.1-16.tar.gz
 Summary  : Exploratory Analyses for the Phylogenetic Comparative Method
